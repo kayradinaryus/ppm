@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Popmundo Araçları Ayarları</title>
+    <link href="../libs/bootstrap.min-5.3.1.css" rel="stylesheet" type="text/css" />
+    <style>
+        body { font-family: "Lucida Grande", Verdana, sans-serif; font-size: 11px; color: #111111; background-color: #f0f2f5; }
+        .fieldset-header { background-color: #33647D; color: white; padding: 8px 15px; border-radius: 4px; margin-bottom: 15px; width: 100%; text-align: left; }
+        .options-row .col-12, .options-row .col-lg-4, .options-row .col-md-6 { margin-bottom: 8px; display: flex; align-items: center; }
+        label { margin-left: 5px; vertical-align: middle; }
+        fieldset { border: 1px solid #dee2e6 !important; }
+        .fieldset-special { border-color: #ffc107 !important; }
+        .score-scale-box { margin-left: 20px; margin-top: 2px; }
+        .popup-list { border-left: 1px solid #dee2e6; padding-left: 25px; }
+        .section-sub-header { font-weight: bold; margin-bottom: 10px; color: #33647D; text-decoration: underline; }
+        .description-text { color: #666; margin-bottom: 15px; display: block; }
+    </style>
+</head>
+<body>
+<div class="container-fluid py-3">
+
+    <fieldset class="rounded mb-3 p-3">
+        <div class="fieldset-header">Gelişmiş Bağlantı Seçenekleri</div>
+        <label class="description-text">Çeşitli sayfalardaki bağlantılara hızlı erişim menüleri ekler.</label>
+        <div class="container-fluid px-0">
+            <div class="row options-row">
+                <div class="col-lg-4 col-md-6"><input type="checkbox" id="band_popularity_shortcut"><label for="band_popularity_shortcut">Gruplar için "Popülerlik" bağlantısını etkinleştir.</label></div>
+                <div class="col-lg-4 col-md-6"><input type="checkbox" id="band_upcoming_shows"><label for="band_upcoming_shows">Gruplar için "Gelecek Konserler" bağlantısını etkinleştir.</label></div>
+                <div class="col-lg-4 col-md-6"><input type="checkbox" id="character_send_message"><label for="character_send_message">Karakterler için "Mesaj Gönder" bağlantısını etkinleştir.</label></div>
+                <div class="col-lg-4 col-md-6"><input type="checkbox" id="character_call"><label for="character_call">Karakterler için "Ara" bağlantısını etkinleştir.</label></div>
+                <div class="col-lg-4 col-md-6"><input type="checkbox" id="character_offer_an_item"><label for="character_offer_an_item">Karakterler için "Eşya Teklif Et" bağlantısını etkinleştir.</label></div>
+                <div class="col-lg-4 col-md-6"><input type="checkbox" id="city_book_regular_flight"><label for="city_book_regular_flight">Şehirler için "Normal Uçuş Ayarla" bağlantısını etkinleştir.</label></div>
+                <div class="col-lg-4 col-md-6"><input type="checkbox" id="city_charter_vip_jet"><label for="city_charter_vip_jet">Şehirler için "VIP Jet Kirala" bağlantısını etkinleştir.</label></div>
+                <div class="col-lg-4 col-md-6"><input type="checkbox" id="city_other_vehicles"><label for="city_other_vehicles">Şehirler için "Diğer Araçlar" bağlantısını etkinleştir.</label></div>
+                <div class="col-lg-4 col-md-6"><input type="checkbox" id="city_find_locales"><label for="city_find_locales">Şehirler için "Mekân Bul" bağlantısını etkinleştir.</label></div>
+                <div class="col-lg-4 col-md-6"><input type="checkbox" id="locale_characters_present"><label for="locale_characters_present">Mekânlar için "Mekândaki Karakterler" bağlantısını etkinleştir.</label></div>
+                <div class="col-lg-4 col-md-6"><input type="checkbox" id="move_to_shortcut"><label for="move_to_shortcut">Mekânlar için "Mekâna Git" bağlantısını etkinleştir.</label></div>
+                <div class="col-lg-4 col-md-6"><input type="checkbox" id="locale_show_reconnaissance"><label for="locale_show_reconnaissance">Mekânlar için "Keşif" bağlantısını etkinleştir.</label></div>
+                <div class="col-lg-4 col-md-6"><input type="checkbox" id="crew_top_heist_shortcut"><label for="crew_top_heist_shortcut">Çeteler için "En İyi Soygunlar" bağlantısını etkinleştir.</label></div>
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset class="rounded mb-3 p-3">
+        <div class="fieldset-header">Çeşitli Özellikler & Görünüm</div>
+        <div class="container-fluid px-0">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="section-sub-header">Genel Ayarlar</div>
+                    <div class="option-item mb-2"><input type="checkbox" id="fast_character_switch"><label for="fast_character_switch"> Karakterler arası otomatik geçiş yap.</label></div>
+                    <div class="option-item mb-2"><input type="checkbox" id="redirect_to_login"><label for="redirect_to_login"> Standart Giriş Sayfasına yönlendir.</label></div>
+                    <div class="option-item mb-1"><input type="checkbox" id="score_highlight"><label for="score_highlight"> Puan vurgulamasını etkinleştir.</label></div>
+                    <div class="score-scale-box">
+                        <label for="score_scale">Puan Ölçeği: </label>
+                        <select class="form-select form-select-sm d-inline-block w-auto" id="score_scale">
+                            <option value="0_26" selected>0'dan 26'ya</option>
+                            <option value="1_27">1'den 27'ye</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6 popup-list">
+                    <div class="section-sub-header">Açılır Pencere (Popup) Seçenekleri</div>
+                    <div class="option-item mb-1"><input type="checkbox" id="character_popup"><label for="character_popup">Karakter pop-up'ını etkinleştir.</label></div>
+                    <div class="option-item mb-1"><input type="checkbox" id="song_popup"><label for="song_popup">Şarkı pop-up'ını etkinleştir.</label></div>
+                    <div class="option-item mb-1"><input type="checkbox" id="recent_progress_popup"><label for="recent_progress_popup">Yetenek pop-up'ını etkinleştir.</label></div>
+                    <div class="option-item mb-1"><input type="checkbox" id="show_club_popup"><label for="show_club_popup">Kulüp pop-up'ını etkinleştir.</label></div>
+                    <div class="option-item mb-1"><input type="checkbox" id="show_details_popup"><label for="show_details_popup">Konser detayları pop-up'ını etkinleştir.</label></div>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset class="rounded mb-3 p-3">
+        <div class="fieldset-header">Tur Otobüsü Rezervasyon Yardımcısı</div>
+        <label class="description-text">Tur otobüsü rezervasyon yardımcısı seçeneklerini yönetin. Bu özellik sadece VIP hesaplar için çalışır.</label>
+        <div class="container-fluid px-0">
+            <div class="row options-row">
+                <div class="col-12 mb-3"><input type="checkbox" id="tb_enable"><label for="tb_enable"> Tur Otobüsü Yardımcısını Etkinleştir.</label></div>
+                <div class="col-md-auto">
+                    <label for="tb_book_after">Tur Rotasını Ayarla:</label>
+                    <select class="form-select form-select-sm d-inline-block w-auto ms-2" id="tb_book_after">
+                        <option value="previous_event" selected>Önceki Etkinlikten Sonra</option>
+                        <option value="previous_show">Önceki Konserden Sonra</option>
+                    </select>
+                </div>
+                <div class="col-md-auto ms-lg-4">
+                    <label for="tb_hour_range">Kaç saat sonra ayarlansın (1-5)?</label>
+                    <input type="number" class="form-control form-control-sm d-inline-block ms-2" style="width: 60px;" id="tb_hour_range" min="1" max="5">
+                </div>
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset class="rounded fieldset-special mb-3 p-3">
+        <div class="fieldset-header" style="background-color:#ffc107; color:#333;">⭐ Özel Eklentiler</div>
+        <div class="row options-row">
+            <div class="col-lg-4 col-md-6"><input type="checkbox" id="mass_offer_enable"><label for="mass_offer_enable">Toplu Eşya Teklif Etme Aracını Etkinleştir.</label></div>
+            <div class="col-lg-4 col-md-6"><input type="checkbox" id="autograph_collector_enable"><label for="autograph_collector_enable">İmza Toplama Scriptini Etkinleştir.</label></div>
+            <div class="col-lg-4 col-md-6"><input type="checkbox" id="locale_money_manager_enable"><label for="locale_money_manager_enable">Mekân Nakit Yöneticisini Etkinleştir.</label></div>
+            <div class="col-lg-4 col-md-6"><input type="checkbox" id="advanced_inviter_enable"><label for="advanced_inviter_enable">Gelişmiş Davet Scriptini Etkinleştir.</label></div>
+            <div class="col-lg-4 col-md-6"><input type="checkbox" id="zombie_needle_automaton_enable"><label for="zombie_needle_automaton_enable">Zombi İğnesi Otomatını Etkinleştir.</label></div>
+            <div class="col-lg-4 col-md-6"><input type="checkbox" id="periodic_maintenance_enable"><label for="periodic_maintenance_enable">Periyodik Bakım Scriptini Etkinleştir.</label></div>
+            <div class="col-lg-4 col-md-6"><input type="checkbox" id="graffiti_bot_enable"><label for="graffiti_bot_enable">Otomatik Grafiti Botunu Etkinleştir.</label></div>
+        </div>
+    </fieldset>
+
+    <div id="status"></div>
+    <button id="save" class="btn btn-primary w-100 py-2 fw-bold">Ayarları Kaydet</button>
+    <footer class="text-center text-secondary mt-3 small">Popmundo Araçları v1.0 - Geliştiren: Nova Maximoff</footer>
+
+</div>
+    <script src="options.js"></script>
+    <script src="../libs/bootstrap.min-5.3.1.js"></script>
+</body>
+</html>
